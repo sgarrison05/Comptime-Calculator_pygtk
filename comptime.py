@@ -12,8 +12,8 @@ globalPreview =""
 class Base:
     
     def destroy(self, widget, data=None):
-        print "\n"
-        print "Application is Now Exiting..."
+        print("\n")
+        print("Application is Now Exiting...")
         gtk.main_quit()
 
     def get_Date(self, widget):
@@ -21,8 +21,8 @@ class Base:
         self.lblCurDate.set_text(str(month + 1) + "/" + str(day) + "/" + str(year))
         
     def on_clear(self, widget):
-        print "\n"
-        print "Now Clearing Form..."
+        print("\n")
+        print("Now Clearing Form...")
         self.entryEarned.set_text("")
         self.entryTaken.set_text("")
         self.combobox1.set_active(0) #sets to [Enter One]
@@ -37,8 +37,8 @@ class Base:
     def on_calc_clicked(self, widget):
         global globalBank
         global globalPreview
-        print "\n"
-        print "Calculating New Daily Bal..."
+        print("\n")
+        print("Calculating New Daily Bal...")
         #sets up variables and gets Earned or Taken Values
         date = self.lblCurDate.get_text()
         calcearned = self.entryEarned.get_text()
@@ -67,8 +67,8 @@ class Base:
         #convert to back to string to display in label
         newbal = str(newbal)
         newbank = str(newbank)
-        print "\n"
-        print "Setting Preview of New Balance Applied..."
+        print("\n")
+        print("Setting Preview of New Balance Applied...")
         #shows current calculation daily balance
         self.lbl6.set_text(newbal)
         
@@ -89,8 +89,8 @@ class Base:
 
     def on_apply_clicked(self, widget):
         global globalBank #access global variable
-        print "\n"
-        print "Applying New Daily Balance to Bank..."
+        print("\n")
+        print("Applying New Daily Balance to Bank...")
         
         #incorporate to opening file
         bank2 = globalBank
@@ -119,7 +119,7 @@ class Base:
             state = "on"            
         else:
             state ="off"
-        #print "Button", name, " is ", state
+        #print("Button", name, " is ", state)
         if name == "Earned" and state == "on":
             #turns Earned Entry on for calculation and clear/hides
             #Taken Entry. Resets Daily Balance and Preview Labels
