@@ -172,7 +172,7 @@ class Base:
         #pulls bank amount from text file and loads it for globaBank and lbl5
         global globalBank
         #checks to see if the bankfile exists.  If it does, it pulls from it.
-        if os.path.isdir("/home/sgarrison/temp/") and os.path.isfile("/home/[username]/temp/test1.txt"):
+        if os.path.isdir("/home/[username]/temp/") and os.path.isfile("/home/[username]/temp/test1.txt"):
             f = open("/home/[username]/temp/test1.txt", "r")
             text = f.readline()
             globalBank = float(text)        
