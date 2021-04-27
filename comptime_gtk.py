@@ -172,8 +172,8 @@ class Base:
         #pulls bank amount from text file and loads it for globaBank and lbl5
         global globalBank
         #checks to see if the bankfile exists.  If it does, it pulls from it.
-        if os.path.isdir("/home/sgarrison/temp/") and os.path.isfile("/home/sgarrison/temp/test1.txt"):
-            f = open("/home/sgarrison/temp/test1.txt", "r")
+        if os.path.isdir("/home/sgarrison/temp/") and os.path.isfile("/home/[username]/temp/test1.txt"):
+            f = open("/home/[username]/temp/test1.txt", "r")
             text = f.readline()
             globalBank = float(text)        
             f.close()
@@ -182,19 +182,19 @@ class Base:
             #if bankfile dosen't exist, it creates it with a 0.0 balance then
             #reads from it.
             startBal = "0.0"
-            f = open("/home/sgarrison/temp/test1.txt", "w")
+            f = open("/home/[username]/temp/test1.txt", "w")
             f.write(startBal)
             f.close()
             
-            f = open("/home/sgarrison/temp/test1.txt", "r")
+            f = open("/home/[username]/temp/test1.txt", "r")
             text = f.readline()
             globalBank = float(text)        
             f.close()
             
-            f = open("/home/sgarrison/temp/test2.txt", "w")
-            f.write("Orange County Juvenile Probation Dept.\n"
+            f = open("/home/[username]/temp/test2.txt", "w")
+            f.write("Your Business or Department\n"
             + "-"*40 + "\n" 
-            + "Personal Comptime Sheet for: Shon Garrison\n"
+            + "Personal Comptime Sheet for: [Your Name]\n"
             + "\n" 
             + "Date" + " "*13 + "Reason" + " "*11 + "Earned" + " "*16 
             + "Taken" + " "*15 + "New Balance\n"
